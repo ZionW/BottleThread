@@ -2,6 +2,10 @@
 
 Rhino 8 的瓶口／瓶蓋螺紋建模工具，首個 Yak 測試版。
 
+![PCO 1881 同軸組裝與操作面板](https://raw.githubusercontent.com/ZionW/BottleThread/main/docs/images/pco1881-assembly-panel.png)
+
+PCO 1881 瓶口與瓶蓋的同軸組裝示例，搭配半透明顯示、組合剖面與參數面板。
+
 ## 安裝
 
 下載 `bottlethread-0.1.0-beta.1-rh8_35-any.yak`，拖入 Rhino 安裝，**重新啟動 Rhino**，再執行 `BottleThread`。

@@ -18,3 +18,5 @@
 /yak/src/*
 !/yak/src/BottleThread.csproj
 !/yak/src/BottleThreadPlugin.cs
+
+!/docs/

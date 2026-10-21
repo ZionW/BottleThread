@@ -6,6 +6,10 @@ Rhino 8 瓶口與瓶蓋螺紋建模外掛。提供規格選擇、L／M style 牙
 
 > 目前為 Beta 參考建模工具。Mac 已實機驗證；Windows 已提供編譯組件，但尚未實機驗證。尺寸與配合結果不代表完整 ISBT 瓶蓋認證，也未完成密封、耐壓或完整旋入路徑驗證。
 
+![PCO 1881 同軸組裝模型與 BottleThread 面板](docs/images/pco1881-assembly-panel.png)
+
+PCO 1881 瓶口與瓶蓋同軸對位示例；半透明顯示方便觀察內外牙及排氣缺口，右側面板提供組合剖面與尺寸調整。
+
 ## 安裝
 
 - Rhino **8.35 或更新版本**，macOS／Windows。
