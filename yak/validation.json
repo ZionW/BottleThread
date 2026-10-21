@@ -1,11 +1,14 @@
 {
-  "package": "bottlethread-0.1.0-beta.3-rh8_35-any.yak",
+  "package": "bottlethread-1.0.0-rh8_35-any.yak",
   "net7_build": true,
   "net48_build": true,
   "explicit_scripting_plugin_load": true,
   "launcher_host_simulation_tests_passed": 7,
   "tests_use_real_rhino_runtime": false,
-  "windows_first_launch_verified": false,
+  "windows_first_launch_verified": true,
   "mac_first_launch_status": "not run: license in use on another computer",
-  "geometry_changed": false
+  "geometry_changed": false,
+  "release": "1.0.0",
+  "windows_first_launch_verification_source": "user report: confirmed working after automatic scripting-service loading",
+  "windows_full_geometry_regression_verified": false
 }

@@ -1,10 +1,10 @@
-# BottleThread for Rhino 8
+# BottleThread 1.0 for Rhino 8
 
 Rhino 8 瓶口與瓶蓋螺紋建模外掛。提供規格選擇、L／M style 牙型、自訂參數、同軸組裝生成與剖面示意。
 
-**下載：[最新 Release](https://github.com/ZionW/BottleThread/releases/tag/v0.1.0-beta.3) · [所有版本](https://github.com/ZionW/BottleThread/releases)**
+**下載：[最新 Release](https://github.com/ZionW/BottleThread/releases/latest) · [所有版本](https://github.com/ZionW/BottleThread/releases)**
 
-> 目前為 Beta 參考建模工具。Mac 已實機驗證；Windows 已提供編譯組件，但尚未實機驗證。尺寸與配合結果不代表完整 ISBT 瓶蓋認證，也未完成密封、耐壓或完整旋入路徑驗證。
+> 第一個正式版本 v1.0.0。Mac 已完成安裝與幾何測試；Windows 使用者已確認啟動成功，完整幾何回歸尚未在 Windows 實測。尺寸與配合結果不代表完整 ISBT 瓶蓋認證，也未完成密封、耐壓或完整旋入路徑驗證。
 
 ![PCO 1881 同軸組裝模型與 BottleThread 面板](docs/images/pco1881-assembly-panel.png)
 
@@ -23,15 +23,12 @@ PCO 1881 瓶口與瓶蓋同軸對位示例；半透明顯示方便觀察內外�
 
 初次執行如需初始化 Python 3，請讓 Rhino 完成初始化。目前只提供 GitHub Release 的本地 Yak，尚未發布至公開 Yak 套件伺服器。
 
-## 首次啟動自動載入（beta.3）
+## 首次啟動自動載入
 
-使用者回報：先執行 `ScriptEditor` 後，beta.1／beta.2 才能開啟面板。
-beta.3 針對這條首次啟動路徑，先透過 RhinoCommon 明確載入內建 `RhinoCodePlugin`，再執行 `_-ScriptEditor _Run` 載入 Python 3 與面板。
-正常使用只需執行 `BottleThread`，無需事先手動開啟 ScriptEditor。
+外掛先透過 RhinoCommon 明確載入內建 `RhinoCodePlugin`，再執行 `_-ScriptEditor _Run` 載入 Python 3 與面板。直接執行 `BottleThread` 即可，無需事先手動開啟 ScriptEditor。
 
-更新後請**完全關閉並重新啟動 Rhino**，確保載入 beta.3。首次 Python 初始化可能需要等待；若 Rhino 的 Python 初始化本身失敗，請提供 `RhinoCodeLogs` 的錯誤紀錄。
-
-beta.3 的兩組組件已編譯、七項載入器順序／失敗路徑測試通過；測試使用模擬 Rhino 主機，驗證的是正式載入器程式的呼叫順序，**不等同 Windows 的實機啟動驗證**。Windows 首次啟動仍需回測；Mac 啟動測試受授權占用限制。
+更新後請**完全關閉並重新啟動 Rhino**。首次 Python 初始化可能需要等待；若初始化本身失敗，請提供 `RhinoCodeLogs` 的錯誤紀錄。
+Windows 使用者已確認修正後可直接啟動。兩組組件已編譯，七項模擬主機載入器測試通過。
 參考：[McNeel 腳本服務載入順序](https://github.com/mcneel/compute.rhino3d/blob/8.x/src/compute.geometry/Startup.cs)、[Rhino 語言初始化說明](https://developer.rhino3d.com/guides/scripting/advanced-langinit/)。
 
 ## 使用
@@ -67,14 +64,14 @@ PCO 瓶口及瓶蓋內牙的排氣缺口可分別勾選，四處缺口共用寬�
 
 ## 驗證狀態
 
-前版 beta.1 已於 Rhino **8.35.26251.13002 / macOS** 實測（以下不表示 beta.2 已完成 Windows 實測）：
+Mac 幾何與安裝測試於 Rhino **8.35.26251.13002 / macOS** 完成；正式版沿用已確認可用的生成程式：
 
 - Yak 安裝、載入 `.rhp`、`BottleThread` 指令啟動及關閉重開。
 - 四語切換與使用者設定儲存。
 - 從安裝後的資源生成 PCO 1881 對位瓶口／瓶蓋：兩件皆為有效封閉實體，瓶蓋有四處排氣缺口。
 - 先前幾何測試：PCO 1881 組裝位置干涉體積為 0、內凸牙高度實測 0.900 mm；PCO 1881／1810／24/410／28/410 瓶口內孔無殘料。
 
-精簡安裝驗證紀錄：[yak/validation.json](yak/validation.json)。Windows 組件編譯完成，**Windows 執行仍待實機驗證**。無干涉只代表已測組裝位置，不代表完整旋入過程、密封或耐壓通過。
+精簡安裝驗證紀錄：[yak/validation.json](yak/validation.json)。Windows 使用者已確認可直接啟動，**完整幾何回歸尚未在 Windows 實測**。無干涉只代表已測組裝位置，不代表完整旋入過程、密封或耐壓通過。
 
 ## 原始碼與建置
 
@@ -113,6 +110,6 @@ BottleThread generates reference bottle-neck and cap threads in Rhino 8.35+ on m
 
 Select neck, cap, or both. Paired outputs share an assembled axis and thread phase. The panel supports 17 presets/templates, custom L/M profiles, independent cap vent slots, section previews, and Traditional Chinese / English / Japanese / Korean.
 
-Beta.3 explicitly loads Rhino’s built-in scripting service before running the panel. Normal use requires only BottleThread, without opening ScriptEditor first. Both assemblies build and seven host-simulated dispatch tests pass; Windows first-launch retesting is still required. The prior beta.1 command and geometry were tested on Mac. PCO 1881 cap dimensions are adjustable reference values, not a certified closure specification. Sealing, pressure resistance and the full screw-on motion remain unverified.
+Version 1.0 explicitly loads Rhino’s built-in scripting service before running the panel. Normal use requires only BottleThread, without opening ScriptEditor first. Windows launch is user-confirmed; full Windows geometry regression is pending. Both assemblies build and seven simulated-host dispatch tests pass. Installation and geometry were tested on Mac. PCO 1881 cap dimensions are adjustable reference values, not a certified closure specification. Sealing, pressure resistance and the full screw-on motion remain unverified.
 
 載入器回歸測試（.NET 10 SDK，模擬主機）：`dotnet run --project yak/tests/LauncherTests.csproj`。
