@@ -26,4 +26,12 @@
 
 ![PCO 1881 同軸組裝與操作面板](https://raw.githubusercontent.com/ZionW/BottleThread/main/docs/images/pco1881-assembly-panel.png)
 
+## 實物對照與列印樣件
+
+| 實物與 Rhino 模型對照 | 瓶口／瓶蓋 3D 列印樣件 |
+| --- | --- |
+| ![實物瓶蓋與 Rhino 螺紋模型對照](https://raw.githubusercontent.com/ZionW/BottleThread/main/docs/images/bottle-cap-physical-comparison.jpg) | ![綠色瓶口與瓶蓋的 3D 列印樣件](https://raw.githubusercontent.com/ZionW/BottleThread/main/docs/images/printed-neck-cap-samples.jpg) |
+
+照片展示模型與實物對照，以及列印後的瓶口與瓶蓋內外牙細節。
+
 English: First stable release, promoted from the confirmed working version. Install the universal Yak in Rhino 8.35+, restart Rhino, and run BottleThread directly. Windows startup is user-confirmed; full Windows geometry regression remains pending. Reference geometry only.

@@ -10,6 +10,14 @@ Rhino 8 瓶口與瓶蓋螺紋建模外掛。提供規格選擇、L／M style 牙
 
 PCO 1881 瓶口與瓶蓋同軸對位示例；半透明顯示方便觀察內外牙及排氣缺口，右側面板提供組合剖面與尺寸調整。
 
+## 實物對照與列印樣件
+
+| 實物與 Rhino 模型對照 | 瓶口／瓶蓋 3D 列印樣件 |
+| --- | --- |
+| ![實物瓶蓋與 Rhino 螺紋模型對照](docs/images/bottle-cap-physical-comparison.jpg) | ![綠色瓶口與瓶蓋的 3D 列印樣件](docs/images/printed-neck-cap-samples.jpg) |
+
+照片展示模型與實物對照，以及列印後的瓶口與瓶蓋內外牙細節。
+
 ## 安裝
 
 - Rhino **8.35 或更新版本**，macOS／Windows。
