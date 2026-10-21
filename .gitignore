@@ -1,0 +1,20 @@
+# Publish only active sources; retain local study files outside version control.
+/*
+!/.gitignore
+!/README.md
+!/bottle_thread_engine.py
+!/bottle_thread_panel.py
+!/bottle_thread_preview.py
+!/bottle_thread_catalog.json
+!/bottle_thread_i18n.json
+!/yak/
+/yak/*
+!/yak/src/
+!/yak/build_package.py
+!/yak/manifest.yml
+!/yak/INSTALL.md
+!/yak/RELEASE_NOTES.md
+!/yak/validation.json
+/yak/src/*
+!/yak/src/BottleThread.csproj
+!/yak/src/BottleThreadPlugin.cs

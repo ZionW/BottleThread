@@ -1,0 +1,16 @@
+---
+name: bottlethread
+version: 0.1.0-beta.1
+authors:
+- ZionW
+description: >
+  Rhino 8 bottle neck and cap reference thread generator with PCO, packaging,
+  L/M profiles, custom parameters, assembly alignment and vent slots.
+  Traditional Chinese, English, Japanese and Korean interface.
+  Reference geometry only; sealing and pressure performance are not certified.
+keywords:
+- bottle
+- thread
+- packaging
+- PCO
+- guid:bbfc1386-f3c6-46b0-a0f4-8df16576dc52

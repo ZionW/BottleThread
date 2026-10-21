@@ -1,0 +1,548 @@
+{
+  "title": [
+    "瓶口／瓶蓋螺紋",
+    "Neck / Cap Threads",
+    "ボトル・キャップねじ",
+    "병목 · 캡 나사"
+  ],
+  "subtitle": [
+    "選規格或自訂牙型；長度 mm、角度 °。",
+    "Choose a preset or customize. Lengths in mm, angles in °.",
+    "規格選択・カスタム設定。長さ mm、角度 °。",
+    "규격 선택 또는 사용자 설정. 길이 mm, 각도 °."
+  ],
+  "language": [
+    "語言",
+    "Language",
+    "言語",
+    "언어"
+  ],
+  "output": [
+    "生成類型",
+    "Create",
+    "生成対象",
+    "생성 대상"
+  ],
+  "preset": [
+    "規格",
+    "Preset",
+    "規格",
+    "규격"
+  ],
+  "style": [
+    "牙型",
+    "Profile",
+    "ねじ山形状",
+    "나사산 형상"
+  ],
+  "neck": [
+    "瓶口 · 公牙",
+    "Neck · external",
+    "ボトル口・外ねじ",
+    "병목 · 수나사"
+  ],
+  "cap": [
+    "瓶蓋 · 母牙",
+    "Cap · internal",
+    "キャップ・内ねじ",
+    "캡 · 암나사"
+  ],
+  "native": [
+    "依規格牙型",
+    "Preset profile",
+    "規格の形状",
+    "규격 형상"
+  ],
+  "custom_angles": [
+    "自訂角度",
+    "Custom angles",
+    "角度を指定",
+    "사용자 각도"
+  ],
+  "dimensions": [
+    "尺寸",
+    "Dimensions",
+    "寸法",
+    "치수"
+  ],
+  "tooth": [
+    "牙型",
+    "Profile",
+    "山形状",
+    "산 형상"
+  ],
+  "closure": [
+    "瓶蓋／排氣",
+    "Cap / vents",
+    "キャップ・排気",
+    "캡 / 배기"
+  ],
+  "position": [
+    "位置",
+    "Position",
+    "位置",
+    "위치"
+  ],
+  "section": [
+    "剖面示意",
+    "Section",
+    "断面図",
+    "단면도"
+  ],
+  "tooth_view": [
+    "牙型放大",
+    "Tooth detail",
+    "山形状の詳細",
+    "나사산 확대"
+  ],
+  "vent_view": [
+    "缺口俯視",
+    "Vents · top",
+    "排気溝・上面",
+    "배기 홈 · 평면"
+  ],
+  "vent_toggle": [
+    "瓶口排氣缺口（四處，簡化槽端）",
+    "Neck vents · 4 slots, simplified ends",
+    "口部の排気溝（4か所、端部は簡略化）",
+    "병목 배기 홈 (4개, 끝단 단순화)"
+  ],
+  "right": [
+    "右旋螺紋",
+    "Right-hand thread",
+    "右ねじ",
+    "오른나사"
+  ],
+  "reset": [
+    "重設規格",
+    "Reset",
+    "規格をリセット",
+    "규격 초기화"
+  ],
+  "save": [
+    "另存自訂",
+    "Save preset",
+    "設定を保存",
+    "설정 저장"
+  ],
+  "check": [
+    "檢查參數",
+    "Check",
+    "設定を確認",
+    "설정 확인"
+  ],
+  "build_neck": [
+    "生成瓶口",
+    "Create neck",
+    "口部を生成",
+    "병목 생성"
+  ],
+  "build_cap": [
+    "生成瓶蓋",
+    "Create cap",
+    "キャップを生成",
+    "캡 생성"
+  ],
+  "source": [
+    "圖 {0} · {1}。局部參考模型。",
+    "Drawing {0} · {1}. Partial reference model.",
+    "図面 {0} · {1}。部分参考モデル。",
+    "도면 {0} · {1}. 부분 참조 모델."
+  ],
+  "international": [
+    "國際",
+    "International",
+    "国際",
+    "국제"
+  ],
+  "spi": [
+    "SPI／國際包裝",
+    "SPI / international",
+    "SPI・国際容器",
+    "SPI / 국제 용기"
+  ],
+  "japan": [
+    "日本（ISBT 歷史分類）",
+    "Japan (historical ISBT)",
+    "日本（ISBTの過去の分類）",
+    "일본 (ISBT 과거 분류)"
+  ],
+  "latin": [
+    "拉丁美洲（歷史分類）",
+    "Latin America (historical)",
+    "中南米（過去の分類）",
+    "중남미 (과거 분류)"
+  ],
+  "africa": [
+    "南非（歷史分類）",
+    "South Africa (historical)",
+    "南アフリカ（過去の分類）",
+    "남아프리카 (과거 분류)"
+  ],
+  "custom": [
+    "自訂",
+    "Custom",
+    "カスタム",
+    "사용자 설정"
+  ],
+  "ready": [
+    "選擇規格並調整參數。",
+    "Choose a preset and adjust parameters.",
+    "規格を選び、寸法を調整してください。",
+    "규격을 선택하고 치수를 조정하세요."
+  ],
+  "loaded": [
+    "已載入 {0}。",
+    "Loaded {0}.",
+    "{0} を読み込みました。",
+    "{0} 불러옴."
+  ],
+  "edited": [
+    "參數已修改，結果將標為自訂／參考。",
+    "Edited values produce a custom/reference model.",
+    "変更した設定はカスタム・参考モデルになります。",
+    "변경된 값은 사용자 설정 / 참조 모델로 생성됩니다."
+  ],
+  "summary": [
+    "牙高 {0:.3f} mm · 完整牙高 {1:.2f} 圈 · {2:.2f} TPI",
+    "Depth {0:.3f} mm · {1:.2f} full-depth turns · {2:.2f} TPI",
+    "山高さ {0:.3f} mm・完全山 {1:.2f} 周・{2:.2f} TPI",
+    "산 높이 {0:.3f} mm · 유효 {1:.2f} 회전 · {2:.2f} TPI"
+  ],
+  "busy": [
+    "正在生成並檢查…",
+    "Creating and checking…",
+    "生成・確認中…",
+    "생성 및 확인 중…"
+  ],
+  "success": [
+    "完成：封閉實體，無裸邊。外徑 {0:.3f} mm，可 Undo。",
+    "Done: closed solid, no naked edges. OD {0:.3f} mm. Undo available.",
+    "完了：閉じたソリッド、裸エッジなし。外径 {0:.3f} mm。Undo可。",
+    "완료: 닫힌 솔리드, 열린 모서리 없음. 외경 {0:.3f} mm. 실행 취소 가능."
+  ],
+  "fail": [
+    "未生成：{0}",
+    "Not created: {0}",
+    "生成できません：{0}",
+    "생성 실패: {0}"
+  ],
+  "check_ok": [
+    "基本尺寸通過；生成時再驗證圓角與接合。",
+    "Basic checks passed. Fillets and joins are checked during creation.",
+    "基本寸法は適切です。生成時に丸みと接合を確認します。",
+    "기본 치수 확인 완료. 생성 시 필렛과 접합을 검증합니다."
+  ],
+  "style_notice": [
+    "已套用角度模板與 R0.2；視為自訂。",
+    "Angle template and R0.2 applied; custom geometry.",
+    "角度テンプレートとR0.2を適用。カスタム形状です。",
+    "각도 템플릿 및 R0.2 적용. 사용자 형상입니다."
+  ],
+  "saved": [
+    "已儲存自訂規格 {0}。",
+    "Saved custom preset {0}.",
+    "カスタム設定 {0} を保存しました。",
+    "사용자 설정 {0} 저장 완료."
+  ],
+  "invalid": [
+    "請輸入有效數值。",
+    "Enter valid numbers.",
+    "有効な数値を入力してください。",
+    "유효한 숫자를 입력하세요."
+  ],
+  "field_error": [
+    "請檢查欄位：{0}",
+    "Check field: {0}",
+    "項目を確認：{0}",
+    "항목 확인: {0}"
+  ],
+  "dimension_error": [
+    "尺寸需符合 0 < I < E < T。",
+    "Dimensions must satisfy 0 < I < E < T.",
+    "寸法は 0 < I < E < T を満たす必要があります。",
+    "치수는 0 < I < E < T 를 만족해야 합니다."
+  ],
+  "radius_error": [
+    "圓角過大或牙型無法接合，請調整。",
+    "Radius is too large or the profile cannot join.",
+    "丸みが大きすぎるか、山形状を接合できません。",
+    "반지름이 너무 크거나 형상을 접합할 수 없습니다."
+  ],
+  "geometry_error": [
+    "幾何檢查未通過，請調整尺寸或圓角。",
+    "Geometry checks failed. Adjust dimensions or radii.",
+    "形状の検証に失敗。寸法や丸みを調整してください。",
+    "형상 검증 실패. 치수 또는 반지름을 조정하세요."
+  ],
+  "cap_error": [
+    "壁厚與頂厚至少 0.3 mm，間隙不可為負。",
+    "Wall/top thickness must be at least 0.3 mm; gaps cannot be negative.",
+    "壁厚・天板厚は0.3 mm以上、隙間は0以上にしてください。",
+    "벽/상단 두께는 최소 0.3 mm, 간극은 0 이상이어야 합니다."
+  ],
+  "closed": [
+    "原文件已關閉，請重新開啟面板。",
+    "The bound document closed. Reopen the panel.",
+    "元のドキュメントが閉じました。パネルを開き直してください。",
+    "연결된 문서가 닫혔습니다. 패널을 다시 여세요."
+  ],
+  "footer": [
+    "原型：局部參考模型；槽端及特殊起牙仍簡化，密封未驗證。SPI 的 I 為最小開口。",
+    "Prototype: partial reference; simplified vent ends/run-in, seals unverified. SPI I is a minimum bore.",
+    "試作：部分参考モデル。溝端・開始部は簡略化、密封性は未検証。SPI Iは最小開口です。",
+    "시제품: 부분 참조 모델. 홈 끝단/시작부 단순화, 밀봉 미검증. SPI I는 최소 개구."
+  ],
+  "f_T": [
+    "T 牙頂外徑",
+    "T · major diameter",
+    "T 山頂外径",
+    "T 산 외경"
+  ],
+  "f_E": [
+    "E 瓶頸外徑",
+    "E · neck diameter",
+    "E 首部外径",
+    "E 병목 외경"
+  ],
+  "f_I_test": [
+    "I 內孔直徑",
+    "I · bore diameter",
+    "I 内径",
+    "I 내경"
+  ],
+  "f_H": [
+    "H 局部高度",
+    "H · local height",
+    "H 部分高さ",
+    "H 부분 높이"
+  ],
+  "f_pitch": [
+    "螺距 P",
+    "Pitch P",
+    "ピッチ P",
+    "피치 P"
+  ],
+  "f_c": [
+    "牙頂交點寬度",
+    "Crest intersection width",
+    "山頂交点の幅",
+    "산꼭대기 교점 폭"
+  ],
+  "f_top": [
+    "上牙側角度 °",
+    "Upper flank °",
+    "上側フランク °",
+    "위쪽 산 각도 °"
+  ],
+  "f_bottom": [
+    "下牙側角度 °",
+    "Lower flank °",
+    "下側フランク °",
+    "아래쪽 산 각도 °"
+  ],
+  "f_Rcrest": [
+    "牙頂圓角 R",
+    "Crest radius R",
+    "山頂の丸み R",
+    "산꼭대기 반지름 R"
+  ],
+  "f_Rroot": [
+    "牙根圓角 R",
+    "Root radius R",
+    "谷の丸み R",
+    "골 반지름 R"
+  ],
+  "f_full_degrees": [
+    "完整牙高角度 °",
+    "Full-depth angle °",
+    "完全山の角度 °",
+    "유효 산 각도 °"
+  ],
+  "f_S": [
+    "頂面至起牙距離",
+    "Top-to-thread distance",
+    "上端からねじ開始まで",
+    "상단부터 나사 시작 거리"
+  ],
+  "f_runin": [
+    "起牙漸入角度 °",
+    "Run-in angle °",
+    "開始部の移行角 °",
+    "시작 전이 각도 °"
+  ],
+  "f_runout": [
+    "末端收頭角度 °",
+    "Run-out angle °",
+    "終端の移行角 °",
+    "끝단 전이 각도 °"
+  ],
+  "f_x": [
+    "位置 X",
+    "Position X",
+    "位置 X",
+    "위치 X"
+  ],
+  "f_y": [
+    "位置 Y",
+    "Position Y",
+    "位置 Y",
+    "위치 Y"
+  ],
+  "f_z": [
+    "位置 Z",
+    "Position Z",
+    "位置 Z",
+    "위치 Z"
+  ],
+  "f_cap_wall": [
+    "瓶蓋最小壁厚",
+    "Minimum cap wall",
+    "キャップ最小壁厚",
+    "캡 최소 벽 두께"
+  ],
+  "f_cap_top": [
+    "瓶蓋頂厚",
+    "Cap top thickness",
+    "キャップ天板厚",
+    "캡 상단 두께"
+  ],
+  "f_radial_gap": [
+    "徑向配合間隙",
+    "Radial clearance",
+    "半径方向の隙間",
+    "반경 방향 간극"
+  ],
+  "f_axial_gap": [
+    "每側軸向間隙",
+    "Axial gap per side",
+    "片側の軸方向隙間",
+    "측면별 축 방향 간극"
+  ],
+  "f_head_gap": [
+    "頂部預留間隙",
+    "Top clearance",
+    "上部の隙間",
+    "상단 간극"
+  ],
+  "f_vent_width": [
+    "排氣缺口寬度",
+    "Vent width",
+    "排気溝の幅",
+    "배기 홈 폭"
+  ],
+  "f_vent_phase": [
+    "排氣角位偏移 °",
+    "Vent phase offset °",
+    "排気溝の位相 °",
+    "배기 홈 위상 °"
+  ],
+  "schematic": [
+    "示意，非密封設計",
+    "Schematic, not a seal design",
+    "模式図・密封設計ではありません",
+    "개략도, 밀봉 설계 아님"
+  ],
+  "profile_bad": [
+    "圓角／牙型無法成立",
+    "Profile/radius cannot fit",
+    "形状・丸みが成立しません",
+    "형상/반지름 부적합"
+  ],
+  "vents_off": [
+    "無排氣缺口",
+    "No vent slots",
+    "排気溝なし",
+    "배기 홈 없음"
+  ],
+  "vents_on": [
+    "四處缺口，寬 {0:.2f} mm",
+    "4 slots, width {0:.2f} mm",
+    "4か所、幅 {0:.2f} mm",
+    "4개 홈, 폭 {0:.2f} mm"
+  ],
+  "phase": [
+    "角位偏移 {0:.1f}°",
+    "Phase offset {0:.1f}°",
+    "位相 {0:.1f}°",
+    "위상 {0:.1f}°"
+  ],
+  "mating": [
+    "缺口位於配對瓶口",
+    "Slots are on the mating neck",
+    "溝は相手の口部に配置",
+    "홈은 결합 병목에 적용"
+  ],
+  "start": [
+    "起點 0°",
+    "Start 0°",
+    "開始 0°",
+    "시작 0°"
+  ],
+  "build_pair": [
+    "生成瓶口＋瓶蓋",
+    "Create neck + cap",
+    "口部＋キャップを生成",
+    "병목 + 캡 생성"
+  ],
+  "build_selected": [
+    "生成勾選項目",
+    "Create selected",
+    "選択項目を生成",
+    "선택 항목 생성"
+  ],
+  "select_output": [
+    "請至少勾選瓶口或瓶蓋。",
+    "Select at least neck or cap.",
+    "口部またはキャップを選択してください。",
+    "병목 또는 캡을 하나 이상 선택하세요."
+  ],
+  "pair_notice": [
+    "將同軸對位生成瓶口與瓶蓋。",
+    "Create neck and cap in assembled alignment.",
+    "口部とキャップを同軸の組立位置に生成します。",
+    "병구와 뚜껑을 조립 위치에 동축으로 생성합니다."
+  ],
+  "pair_success": [
+    "完成：瓶口與瓶蓋皆為封閉實體，已同軸對位。",
+    "Done: neck and cap are closed solids in assembled alignment.",
+    "完了：口部とキャップは閉じたソリッドで、同軸に配置しました。",
+    "완료: 병구와 뚜껑이 닫힌 솔리드로 동축 배치되었습니다."
+  ],
+  "pair_legend": [
+    "藍：瓶口 · 橘：瓶蓋",
+    "Blue: neck · Orange: cap",
+    "青：口部 · オレンジ：キャップ",
+    "파랑: 병구 · 주황: 뚜껑"
+  ],
+  "f_cap_thread_depth": [
+    "瓶蓋凸牙高度（參考）",
+    "Cap rib height (reference)",
+    "キャップねじ高さ（参考）",
+    "뚜껑 나사 높이 (참고)"
+  ],
+  "f_cap_thread_width": [
+    "瓶蓋凸牙頂寬",
+    "Cap rib crest width",
+    "キャップねじ山幅",
+    "뚜껑 나사산 폭"
+  ],
+  "f_cap_thread_run": [
+    "瓶蓋漸入／收頭 °",
+    "Cap lead-in / runout °",
+    "キャップ導入／終端 °",
+    "뚜껑 시작 / 끝 °"
+  ],
+  "cap_tooth_error": [
+    "瓶蓋牙高需為 0.2–1.2 mm、牙寬 0.2–1.0 mm、收頭 10–90°。",
+    "Cap rib height: 0.2–1.2 mm; width: 0.2–1.0 mm; lead-in/out: 10–90°.",
+    "キャップねじ高さ 0.2–1.2 mm、幅 0.2–1.0 mm、導入／終端 10–90°。",
+    "뚜껑 나사 높이 0.2–1.2 mm, 폭 0.2–1.0 mm, 시작/끝 10–90°."
+  ],
+  "cap_vent_toggle": [
+    "瓶蓋內牙排氣缺口",
+    "Cap thread vent slots",
+    "キャップ内ねじ排気溝",
+    "뚜껑 내측 나사 배기 홈"
+  ]
+}

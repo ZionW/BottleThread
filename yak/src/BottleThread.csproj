@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net7.0;net48</TargetFrameworks>
+    <AssemblyName>BottleThread</AssemblyName>
+    <TargetExt>.rhp</TargetExt>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <Version>0.1.0-beta.1</Version>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <Description>Bottle neck and cap reference thread generator for Rhino 8.</Description>
+    <RhinoSystem Condition="'$(RhinoSystem)' == '' and '$(OS)' != 'Windows_NT'">/Applications/Rhino 8.app/Contents/Frameworks/RhCore.framework/Versions/A/Resources</RhinoSystem>
+    <RhinoSystem Condition="'$(RhinoSystem)' == ''">$(ProgramFiles)/Rhino 8/System</RhinoSystem>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RhinoCommon"><HintPath>$(RhinoSystem)/RhinoCommon.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Rhino.Runtime.Code"><HintPath>$(RhinoSystem)/Rhino.Runtime.Code.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+    <Reference Update="RhinoCommon" Condition="Exists('$(RhinoSystem)/ref/net48/RhinoCommon.dll')"><HintPath>$(RhinoSystem)/ref/net48/RhinoCommon.dll</HintPath></Reference>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+</Project>
