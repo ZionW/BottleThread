@@ -1,3 +1,4 @@
+#! python 3
 """Rhino 8 Python 3: compact four-language thread panel."""
 import math,json
 from pathlib import Path

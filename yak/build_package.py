@@ -17,4 +17,7 @@ shutil.copy2(root/'INSTALL.md',stage/'INSTALL.md')
 yak=os.environ.get('BOTTLETHREAD_YAK') or (str(Path(os.environ.get('ProgramFiles','C:/Program Files'))/'Rhino 8'/'System'/'Yak.exe') if os.name=='nt' else '/Applications/Rhino 8.app/Contents/Resources/bin/yak')
 subprocess.run([yak,'build','--platform','any'],cwd=stage,check=True)
 (root/'dist').mkdir(exist_ok=True)
-for p in stage.glob('*.yak'):shutil.copy2(p,root/'dist'/p.name);print(root/'dist'/p.name)
+# Keep the advertised minimum at Rhino 8.35 even though the pinned SDK is 8.32.
+for p in stage.glob('*.yak'):
+ name=p.name.split('-rh',1)[0]+'-rh8_35-any.yak'
+ shutil.copy2(p,root/'dist'/name);print(root/'dist'/name)

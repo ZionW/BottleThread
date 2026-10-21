@@ -1,34 +1,32 @@
-# BottleThread v0.1.0-beta.1
+# BottleThread v0.1.0-beta.2 — Windows 啟動修正
 
-Rhino 8 的瓶口／瓶蓋螺紋建模工具，首個 Yak 測試版。
+修正 beta.1 在尚未載入 Rhino Python 語言服務時，執行 `BottleThread` 出現 `Can not determine language for ...` 的啟動路徑。
 
-![PCO 1881 同軸組裝與操作面板](https://raw.githubusercontent.com/ZionW/BottleThread/main/docs/images/pco1881-assembly-panel.png)
+## 更新方式
 
-PCO 1881 瓶口與瓶蓋的同軸組裝示例，搭配半透明顯示、組合剖面與參數面板。
+1. 下載 `bottlethread-0.1.0-beta.2-rh8_35-any.yak`，拖入 Rhino 安裝。
+2. **完全關閉並重新啟動 Rhino。**
+3. 執行 `BottleThread`。
+4. 若 Python 3 尚未初始化，先執行 `ScriptEditor`，等待初始化完成後再試。
 
-## 安裝
+需要 Rhino **8.35+**；同一 Yak 包含 Mac／Windows 的 net7.0／net48 AnyCPU 載入器。
 
-下載 `bottlethread-0.1.0-beta.1-rh8_35-any.yak`，拖入 Rhino 安裝，**重新啟動 Rhino**，再執行 `BottleThread`。
+## 變更
 
-需要 **Rhino 8.35+**。同一安裝檔包含 Mac／Windows 使用的 AnyCPU .NET Core 與 .NET Framework 組件。尚未發布到公開 Yak 套件伺服器。
+- 使用官方 `_-ScriptEditor _Run` 入口，讓 Rhino 載入並初始化 Python 3。
+- 載入器加入 ScriptRunner 標記，允許啟動 Rhino 腳本指令。
+- 面板明確指定 `#! python 3`。
+- 移除載入器對 `Rhino.Runtime.Code` 的直接依賴。
+- 固定建置 SDK，避免已安裝 Rhino 更新後意外提高套件版本需求。
+- 螺紋幾何與參數功能未變更。
 
-## 功能
+## 驗證與限制
 
-- 瓶口與瓶蓋獨立勾選；雙選直接以同軸組裝位置生成。
-- PCO 1881、1810、24/410、28/410 等 17 項預設／模板。
-- L／M style、自訂尺寸、牙側角度及圓角。
-- PCO 1881 獨立內凸牙，牙高、牙頂寬及漸入／收頭可調。
-- 瓶口與瓶蓋內牙各自控制四處排氣缺口。
-- 組合剖面、牙型放大、缺口俯視；繁中、英、日、韓介面。
-- 修正瓶口內孔殘料、文件關閉後面板殘留及重開時的空白父視窗。
+- net7.0／net48 編譯成功；兩組組件皆確認不依賴 Rhino.Runtime.Code 或 macOS 專用組件。
+- Mac Yak 安裝成功；首次啟動回歸測試因 Rhino 授權占用而停止。
+- **Windows 的啟動修正仍需實機回測。** 若仍有錯誤，請提供新的命令列／ScriptEditor 錯誤。
+- 原有模型為參考幾何，密封、耐壓及完整旋入路徑尚未驗證。
 
-## 驗證與已知限制
+![PCO 1881 組合模型與操作面板](https://raw.githubusercontent.com/ZionW/BottleThread/main/docs/images/pco1881-assembly-panel.png)
 
-- Mac / Rhino 8.35：Yak 安裝、外掛載入、指令啟動、重開及四語切換通過。
-- 安裝後可生成有效封閉的 PCO 1881 瓶口與瓶蓋，具有對位位置及四處瓶蓋排氣缺口。
-- Windows .NET Core／.NET Framework 組件已編譯；**Windows 尚未實機測試**。
-- 局部參考模型，非完整商用瓶蓋認證尺寸。尚未驗證密封、耐壓與完整旋入路徑；缺口端部使用矩形近似。
-
-附件含 Yak、SHA-256 校驗碼、安裝說明與精簡驗證紀錄。
-
-English: Install the universal Yak in Rhino 8.35+, restart Rhino, then run `BottleThread`. Mac installation and command tested; Windows runtime testing remains pending. Reference geometry only; sealing and pressure performance are not certified.
+English: Fixes the beta.1 launch path behind the reported language-detection error. Install beta.2, completely restart Rhino, then run BottleThread. If needed, open ScriptEditor once and wait for Python 3 initialization. Both assemblies build and the Yak installs on Mac; Windows runtime retesting is still pending.

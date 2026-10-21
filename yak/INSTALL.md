@@ -1,10 +1,10 @@
-# BottleThread 0.1.0-beta.1 — Rhino 8
+# BottleThread 0.1.0-beta.2 — Rhino 8
 
 繁體中文 / English / 日本語 / 한국어
 
 ## 安裝（Mac 與 Windows）
 
-1. 將 `bottlethread-0.1.0-beta.1-rh8_35-any.yak` 拖入 Rhino 8 視窗，依提示安裝。
+1. 將 `bottlethread-0.1.0-beta.2-rh8_35-any.yak` 拖入 Rhino 8 視窗，依提示安裝。
 2. 安裝後請重新啟動 Rhino。
 3. 在 Rhino 指令列輸入 `BottleThread` 開啟面板。
 
@@ -32,3 +32,8 @@ PCO 1881 瓶蓋內凸牙為可調參考牙型。缺口使用矩形近似，並�
 
 Windows 可用 `py -3 build_package.py`。可用 BOTTLETHREAD_YAK 指定 Yak 工具路徑。
 參考：https://developer.rhino3d.com/en/guides/yak/creating-a-multi-targeted-rhino-plugin-package/
+
+## Windows 首次啟動問題（beta.2 修正）
+
+若 beta.1 顯示 `Can not determine language for ...`，請安裝 beta.2，完全關閉並重新啟動 Rhino 後再執行 `BottleThread`。beta.2 改用 Rhino 官方 `_-ScriptEditor _Run` 入口載入及初始化 Python 3，並移除載入器對 Rhino.Runtime.Code 的直接依賴。
+若 Rhino 的 Python 3 初始化本身尚未完成，可先執行 `ScriptEditor`，等待 Python 3 初始化完成後再試；若初始化失敗，請提供 ScriptEditor 的實際錯誤紀錄。
