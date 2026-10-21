@@ -12,7 +12,7 @@ PCO 1881 瓶口與瓶蓋同軸對位示例；半透明顯示方便觀察內外�
 
 ## 實物對照與列印樣件
 
-| 實物與 Rhino 模型對照 | 瓶口／瓶蓋 3D 列印樣件 |
+| 瓶蓋 3D 列印件| 瓶口／瓶蓋 3D 列印件 |
 | --- | --- |
 | ![實物瓶蓋與 Rhino 螺紋模型對照](docs/images/bottle-cap-physical-comparison.jpg) | ![綠色瓶口與瓶蓋的 3D 列印樣件](docs/images/printed-neck-cap-samples.jpg) |
 
