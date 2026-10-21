@@ -20,3 +20,8 @@
 !/yak/src/BottleThreadPlugin.cs
 
 !/docs/
+
+!/yak/tests/
+/yak/tests/*
+!/yak/tests/LauncherTests.cs
+!/yak/tests/LauncherTests.csproj

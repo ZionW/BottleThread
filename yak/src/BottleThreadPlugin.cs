@@ -14,6 +14,7 @@ namespace BottleThread
     [CommandStyle(Style.ScriptRunner)]
     public sealed class BottleThreadCommand : Command
     {
+        private static readonly Guid ScriptingPluginId = new Guid("c9cba87a-23ce-4f15-a918-97645c05cde7");
         public override string EnglishName => "BottleThread";
         protected override Result RunCommand(RhinoDoc doc, RunMode mode)
         {
@@ -22,15 +23,18 @@ namespace BottleThread
                 var root = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 var script = Path.GetFullPath(Path.Combine(root, "..", "scripts", "bottle_thread_panel.py"));
                 if (!File.Exists(script)) throw new FileNotFoundException("BottleThread script is missing.", script);
-                // The public command entry loads/initializes Rhino's language provider.
-                // Direct RhinoCode.RunScript can fail on a fresh session before it is registered.
+                // Register Rhino's language providers before dispatching a script command.
+                // Same built-in plug-in ID/load order used by McNeel's Rhino.Compute startup.
+                if (!PlugIn.LoadPlugIn(ScriptingPluginId))
+                    throw new InvalidOperationException("Rhino scripting service could not be loaded. See RhinoCodeLogs for details.");
+                // ScriptEditor runs the file and initializes Python without opening its editor UI.
                 var macro = "_-ScriptEditor _Run \"" + script + "\"";
                 return RhinoApp.RunScript(macro, false) ? Result.Success : Result.Failure;
             }
             catch (Exception ex)
             {
                 RhinoApp.WriteLine("BottleThread: " + ex.Message);
-                RhinoApp.WriteLine("Run ScriptEditor once and let Python 3 finish initialization, then retry BottleThread.");
+                RhinoApp.WriteLine("If Python initialization fails, inspect RhinoCodeLogs for the underlying error.");
                 return Result.Failure;
             }
         }

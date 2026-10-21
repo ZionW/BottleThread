@@ -5,7 +5,7 @@
     <TargetExt>.rhp</TargetExt>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <LangVersion>latest</LangVersion>
-    <Version>0.1.0-beta.2</Version>
+    <Version>0.1.0-beta.3</Version>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <Description>Bottle neck and cap reference thread generator for Rhino 8.</Description>

@@ -1,14 +1,11 @@
 {
-  "package": "bottlethread-0.1.0-beta.2-rh8_35-any.yak",
+  "package": "bottlethread-0.1.0-beta.3-rh8_35-any.yak",
   "net7_build": true,
   "net48_build": true,
-  "script_runner_attribute": true,
-  "direct_rhinocode_dependency": false,
-  "macos_specific_assembly_dependency": false,
-  "mac_yak_install": true,
-  "mac_cold_start_test": "stopped: license in use on another computer",
-  "windows_reported_beta1_error": "Can not determine language for ...",
-  "windows_runtime_tested": false,
-  "geometry_changed": false,
-  "previous_mac_geometry_validation": "beta.1"
+  "explicit_scripting_plugin_load": true,
+  "launcher_host_simulation_tests_passed": 7,
+  "tests_use_real_rhino_runtime": false,
+  "windows_first_launch_verified": false,
+  "mac_first_launch_status": "not run: license in use on another computer",
+  "geometry_changed": false
 }

@@ -1,32 +1,25 @@
-# BottleThread v0.1.0-beta.2 — Windows 啟動修正
+# BottleThread v0.1.0-beta.3 — 自動載入 Rhino 腳本服務
 
-修正 beta.1 在尚未載入 Rhino Python 語言服務時，執行 `BottleThread` 出現 `Can not determine language for ...` 的啟動路徑。
+針對「必須先執行 ScriptEditor，BottleThread 才能開啟」的問題，補上明確載入 Rhino 內建腳本服務的步驟。
 
-## 更新方式
+## 更新
 
-1. 下載 `bottlethread-0.1.0-beta.2-rh8_35-any.yak`，拖入 Rhino 安裝。
-2. **完全關閉並重新啟動 Rhino。**
-3. 執行 `BottleThread`。
-4. 若 Python 3 尚未初始化，先執行 `ScriptEditor`，等待初始化完成後再試。
+下載 `bottlethread-0.1.0-beta.3-rh8_35-any.yak` 安裝後，**完全關閉並重新啟動 Rhino**，直接輸入 `BottleThread`。
+正常使用無需先手動開啟 ScriptEditor。首次 Python 初始化可能需要等待。
+需要 Rhino 8.35+；同一套件支援 Mac／Windows 的 net7.0／net48 環境。
 
-需要 Rhino **8.35+**；同一 Yak 包含 Mac／Windows 的 net7.0／net48 AnyCPU 載入器。
+## 修正
 
-## 變更
+- 先明確載入內建 RhinoCodePlugin，註冊腳本語言服務。
+- 載入成功才派送 ScriptEditor 的腳本執行入口；載入失敗會停止並提示查看 RhinoCodeLogs。
+- 保留 ScriptRunner 標記及明確 Python 3 語言宣告。
+- 幾何生成、預設規格與面板參數未改動。
 
-- 使用官方 `_-ScriptEditor _Run` 入口，讓 Rhino 載入並初始化 Python 3。
-- 載入器加入 ScriptRunner 標記，允許啟動 Rhino 腳本指令。
-- 面板明確指定 `#! python 3`。
-- 移除載入器對 `Rhino.Runtime.Code` 的直接依賴。
-- 固定建置 SDK，避免已安裝 Rhino 更新後意外提高套件版本需求。
-- 螺紋幾何與參數功能未變更。
+## 驗證範圍
 
-## 驗證與限制
+- 兩組載入器編譯成功。
+- 正式載入器程式以模擬 Rhino 主機測試，七項通過：首次載入順序、正確服務 ID、檔案路徑、重複啟動、服務失敗停止、腳本指令失敗、資源缺失。
+- 模擬測試不等於 Rhino 實機測試。**Windows 首次啟動仍待回測**；Mac 啟動測試受授權占用限制。
+- 模型仍為參考幾何，密封、耐壓及完整旋入路徑尚未驗證。
 
-- net7.0／net48 編譯成功；兩組組件皆確認不依賴 Rhino.Runtime.Code 或 macOS 專用組件。
-- Mac Yak 安裝成功；首次啟動回歸測試因 Rhino 授權占用而停止。
-- **Windows 的啟動修正仍需實機回測。** 若仍有錯誤，請提供新的命令列／ScriptEditor 錯誤。
-- 原有模型為參考幾何，密封、耐壓及完整旋入路徑尚未驗證。
-
-![PCO 1881 組合模型與操作面板](https://raw.githubusercontent.com/ZionW/BottleThread/main/docs/images/pco1881-assembly-panel.png)
-
-English: Fixes the beta.1 launch path behind the reported language-detection error. Install beta.2, completely restart Rhino, then run BottleThread. If needed, open ScriptEditor once and wait for Python 3 initialization. Both assemblies build and the Yak installs on Mac; Windows runtime retesting is still pending.
+English: Explicitly loads Rhino’s built-in scripting provider before dispatching the panel script. Install beta.3, fully restart Rhino, and run BottleThread directly. Both assemblies build; seven simulated-host launcher tests pass. Windows first-launch runtime verification remains pending.
